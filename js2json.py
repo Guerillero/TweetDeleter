@@ -1,11 +1,14 @@
 import os
+import settings
 
-PATH_IN = r"A:\tweets" # Your tweets from your archive download
-PATH_OUT = r"A:\TweetDeleter\data"
-FILES_IN = os.listdir(PATH_IN)
+PATH_OUT = settings.root + "\\data"
+FILES_IN = os.listdir(settings.twitterArchiveData)
+
+if not os.path.exists(PATH_OUT):
+    os.mkdir(PATH_OUT)
 
 for file in FILES_IN:
-    fin = open(PATH_IN + "\\" + file, 'r')
+    fin = open(settings.twitterArchiveData + "\\" + file, 'r')
     fout = open(PATH_OUT + "\\" + file + "on", 'w')
     for line in fin:
         li = line

@@ -36,12 +36,12 @@ def fetch(idNumber):
     else:
         deleter(tweet, idNumber)
 
-PATH_IN = r"A:\Documents\Documents\GitHub\twitter\data"
+PATH_IN = settings.root + "\\data"
 FILES_IN = os.listdir(PATH_IN)
 
 auth = tweepy.OAuthHandler(api_key, api_secret)
 auth.set_access_token(access_token_key, access_token_secret)
-api = tweepy.API(auth)
+api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
 for file in FILES_IN:
     print(file)
