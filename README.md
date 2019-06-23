@@ -6,10 +6,12 @@ to do a Semiphemeral-like purge of all of my tweets from the last 6 years. All o
 the tools that I found on the internet that worked off of the downloadable archive
 were either paid, or deleted everything. So, I wrote these scripts.
 
+## Dependencies
 To run these scrips you need Python 3 and tweepy installed on your computer.
-(`pip install tweepy` should install the library) All other dependancies are '
+(`pip install tweepy` should install the library) All other dependencies are
 either in this repo or in the standard library.
 
+## How to Run
 1. Download your [Twitter archive](https://help.twitter.com/en/managing-your-account/how-to-download-your-twitter-archive)
 2. Unzip the archive into a folder
 3. Edit `settings.py` to add
