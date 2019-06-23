@@ -48,4 +48,7 @@ for file in FILES_IN:
     fin_file = open(PATH_IN + "\\" + file, 'r')
     fin = json.load(fin_file)
     for entry in fin:
-        fetch(entry["id"])
+        if entry["id"] in settings.skip:
+            print("Skipped")
+        else:
+            fetch(entry["id"])

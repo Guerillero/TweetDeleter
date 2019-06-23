@@ -17,6 +17,7 @@ either in this repo or in the standard library.
   * the path to this folder
   * your twitter username
   * the minimum number of interactions to keep a tweet
+  * Any tweets you would like to save (by id number)
 4. Edit `secret.py` to add your Twitter API credentials
   * if you don't have a set of credentials, follow [this guide](https://python-twitter.readthedocs.io/en/latest/getting_started.html). You can use https://github.com/Guerillero/TweetDeleter as the website url of your app.
 5. Run `js2json.py`
